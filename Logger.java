@@ -31,7 +31,7 @@ public class Logger{
 		if(level.ordinal()>currentLevel.ordinal()){
 			
 			String time = LocalDateTime.now().toString();
-			String formatted = "[" + level + "]" + message;
+			String formatted = "[" + level + "]" + time + " "+ message;
 			
 			for(LogAppender appender:appenders){
 				appender.append(formatted);
